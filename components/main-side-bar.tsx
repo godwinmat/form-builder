@@ -22,7 +22,7 @@ const MainSidebar = () => {
     }
 
     return (
-        <div className="px-5 py-4">
+        <div className="px-5 py-4 h-full overflow-y-scroll">
             <Link href="/">
                 <Button variant="outline" className="mb-20">
                     <ArrowLeft />
@@ -33,7 +33,7 @@ const MainSidebar = () => {
             <Droppable droppableId="sidebar">
                 {(droppableProvider) => (
                     <div
-                        className="mt-5 space-y-3"
+                        className="mt-5 space-y-3 pb-20"
                         {...droppableProvider.droppableProps}
                         ref={droppableProvider.innerRef}
                     >

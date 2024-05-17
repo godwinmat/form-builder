@@ -120,7 +120,7 @@ const FormBuilder = ({ components, formId, formTitle }: FormProps) => {
         <Droppable droppableId="form" direction="vertical">
             {(droppableProvided) => (
                 <div
-                    className="border rounded-lg min-w-[400px] py-10 px-10 overflow-y-scroll"
+                    className="border rounded-lg w-full md:w-auto md:min-w-[400px] py-10 px-2 md:px-10 overflow-y-scroll"
                     {...droppableProvided.droppableProps}
                     ref={droppableProvided.innerRef}
                 >

@@ -58,13 +58,13 @@ const Forms = ({ data }: FormsProps) => {
     }
 
     return (
-        <div className="min-w-[500px] rounded-md border py-10 px-5 flex flex-col justify-center items-center">
+        <div className="w-full md:w-auto md:min-w-[500px] rounded-md border py-10 px-2 md:px-5 flex flex-col justify-center items-center">
             <h1 className="font-semibold text-2xl text-center pb-10">Forms</h1>
             <div className="space-y-2 w-full mb-5">
                 {data.map((item, index) => (
                     <div
                         key={item.id}
-                        className="w-full py-3 px-5 bg-gray-100 rounded-md flex justify-between items-center text-lg font-medium"
+                        className="w-full py-3 px-2 md:px-5 bg-gray-100 rounded-md flex justify-between items-center text-lg font-medium"
                     >
                         {item.title}
                         <div className="space-x-2">

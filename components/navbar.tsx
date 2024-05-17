@@ -28,7 +28,9 @@ const Navbar = ({ formTitle, shareUrl }: NavbarProps) => {
             <MobileSidebar />
 
             {!preview ? (
-                <h1 className="text-2xl font-semibold ml-3">{formTitle}</h1>
+                <h1 className="text-lg md:text-2xl font-semibold ml-1 md:ml-3">
+                    {formTitle}
+                </h1>
             ) : (
                 <div className="flex justify-center items-center bg-muted space-x-2 rounded-md pl-2 ml-3 md:ml-0 md:mr-20 w-[200px] lg:w-auto">
                     <p className="text-sm overflow-ellipsis line-clamp-1">
@@ -46,7 +48,10 @@ const Navbar = ({ formTitle, shareUrl }: NavbarProps) => {
                     checked={preview}
                     onCheckedChange={setPreview}
                 />
-                <Label htmlFor="preview" className="text-base font-medium">
+                <Label
+                    htmlFor="preview"
+                    className="text-sm sm:text-base font-medium"
+                >
                     Preview
                 </Label>
             </div>

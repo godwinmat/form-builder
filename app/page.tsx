@@ -17,12 +17,12 @@ export default async function Home() {
     });
 
     return (
-        <main className="h-full">
-            <nav className="flex justify-between items-center px-10 py-3">
+        <main className="h-full w-full">
+            <nav className="flex justify-between items-center px-3 md:px-10 py-3">
                 <h1 className="font-semibold text-xl">Form Builder</h1>
                 <UserButton />
             </nav>
-            <div className="flex h-full justify-center items-center">
+            <div className="flex h-full w-full justify-center items-center">
                 <Forms data={forms} />
             </div>
         </main>
