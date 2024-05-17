@@ -28,7 +28,7 @@ const MainSidebar = () => {
                     <ArrowLeft />
                 </Button>
             </Link>
-            <h1 className="font-bold text-3xl">Form Builder</h1>
+            <h1 className="font-bold text-2xl sm:text-3xl">Form Builder</h1>
 
             <Droppable droppableId="sidebar">
                 {(droppableProvider) => (
@@ -46,7 +46,7 @@ const MainSidebar = () => {
                             >
                                 {(draggableProvided, draggableSnapshot) => (
                                     <Button
-                                        className="h-16 border flex justify-center items-center w-full text-left p-0"
+                                        className="h-14 md:h-16 border flex justify-center items-center w-full text-left p-0"
                                         ref={draggableProvided.innerRef}
                                         {...draggableProvided.draggableProps}
                                         {...draggableProvided.dragHandleProps}
@@ -57,7 +57,7 @@ const MainSidebar = () => {
                                         <div className="bg-gray-200 h-full w-16 flex justify-center items-center mr-3">
                                             <Icon className="w-6 h-6" />
                                         </div>
-                                        <h3 className="flex-1 text-lg">
+                                        <h3 className="flex-1 text-base md:text-lg">
                                             {type.toUpperCase()}
                                         </h3>
                                     </Button>

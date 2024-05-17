@@ -64,7 +64,7 @@ const Forms = ({ data }: FormsProps) => {
                 {data.map((item, index) => (
                     <div
                         key={item.id}
-                        className="w-full py-3 px-2 md:px-5 bg-gray-100 rounded-md flex justify-between items-center text-lg font-medium"
+                        className="w-full py-3 px-2 md:px-5 bg-gray-100 rounded-md flex justify-between items-center text-lg font-semibold"
                     >
                         {item.title}
                         <div className="space-x-2">

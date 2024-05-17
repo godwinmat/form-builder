@@ -22,7 +22,7 @@ export default async function Home() {
                 <h1 className="font-semibold text-xl">Form Builder</h1>
                 <UserButton />
             </nav>
-            <div className="flex h-full w-full justify-center items-center">
+            <div className="flex h-full w-full justify-center items-center px-2">
                 <Forms data={forms} />
             </div>
         </main>
