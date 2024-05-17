@@ -38,6 +38,7 @@ interface PreviewFormProps {
 }
 
 const PreviewForm = ({ components, formId }: PreviewFormProps) => {
+    console.log(components);
     const [loading, setLoading] = useState(false);
     const router = useRouter();
     const form = useForm<z.infer<typeof formSchema>>({
@@ -78,8 +79,13 @@ const PreviewForm = ({ components, formId }: PreviewFormProps) => {
         <Form {...form}>
             <form
                 onSubmit={form.handleSubmit(onSubmit)}
-                className="border rounded-lg min-w-[400px] py-10 px-10 overflow-y-scroll flex flex-col space-y-3"
+                className="border rounded-lg w-full md:w-auto md:min-w-[400px] py-10 px-3 md:px-10 overflow-y-scroll flex flex-col space-y-3"
             >
+                {components.length === 0 && (
+                    <p className="text-center font-semibold text-3xl text-muted-foreground">
+                        No component to display
+                    </p>
+                )}
                 {components.map(({ id, type, value }, index) => {
                     if (type === "heading") {
                         return (
