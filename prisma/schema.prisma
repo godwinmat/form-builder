@@ -1,0 +1,33 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "mongodb"
+  url      = env("DATABASE_URL")
+}
+
+model Component {
+  id        String    @id @default(uuid())  @map("_id")
+  type      String
+  value     String?
+  form   Form? @relation(fields: [formId], references: [id], onDelete: Cascade)
+  formId  String
+}
+
+model Form {
+  id        String    @id @default(uuid())  @map("_id")
+  title     String
+  userId    String
+  components Component[]
+}
+
+model Prospect {
+  id        String    @id @default(uuid())  @map("_id")
+  firstname  String?
+  lastname  String?
+  phone     String?
+  email     String?
+  gender    String?
+  date      String?
+}
